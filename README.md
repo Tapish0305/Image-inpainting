@@ -18,7 +18,9 @@ The CIFAR-10 dataset consists of 60000, 32x32 colour images in 10 classes, with 
 another. Between them, the training batches contain exactly 5000 images from each class.
 
 ## Network Architecture
-![CIFAR-10 Network Architecture]("C:\Users\tapis\OneDrive\Documents\Desktop\CIFAR_10_Network_Architecture.png")
+![CIFAR_10_Network_Architecture](https://github.com/user-attachments/assets/e722d45b-b8c9-419a-a698-586df29d7270)
+
+
 Steps Involved
 1. Data Loading and Preprocessing 
  Load the CIFAR-10 dataset.
