@@ -55,3 +55,12 @@ The obtained accuracy/jaccard coefficient value on the test data is 65.
 
 ![CIFAR-10 Test Data Results](CIFAR_10_Test_Data_Result.PNG)
 
+# Conclusions
+Therefore, the use of a partial convolution layer with an automatic mask updating mechanism can achieve image inpainting results. The model can robustly handle holes of only small size and thickness. However, one limitation of the method is that it fails for thickness of larger size which can be overcome by using larger number of datasets, more training time and using a different loss function. Loss function which targets both per-pixel reconstruction accuracy as well as composition i.e. how smoothly the predicted hole values transition into their surrounding context can be used.
+
+
+## Acknowledgements
+
+ - [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723)
+ - [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
+
