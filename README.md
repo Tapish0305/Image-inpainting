@@ -18,7 +18,7 @@ The CIFAR-10 dataset consists of 60000, 32x32 colour images in 10 classes, with 
 another. Between them, the training batches contain exactly 5000 images from each class.
 
 ## Network Architecture
-
+![CIFAR-10 Network Architecture]("C:\Users\tapis\OneDrive\Documents\Desktop\CIFAR_10_Network_Architecture.png")
 Steps Involved
 1. Data Loading and Preprocessing 
  Load the CIFAR-10 dataset.
@@ -29,7 +29,7 @@ Normalize the images.
  Visualize an image by converting it into a NumPy array and displaying it using imshow().
 Display a batch of images using the training data loader.
 
-3. Custom Dataset Preparation 
+2. Custom Dataset Preparation 
  Define a custom Dataset class:
  Load an image from the dataset.
  Create a mask region.
@@ -39,7 +39,8 @@ Masked image
 Mask-only image
 Image without the masked region
 Visualize the processed images.
-4. Model Training 🏋
+
+3. Model Training 
 Implement the U-Net architecture for image segmentation.
  Define a custom function jaccard_coef to compute the Intersection over Union (IoU) between the predicted and actual images.
  Use Mean Squared Error (MSE) loss function.
