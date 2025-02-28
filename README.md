@@ -19,29 +19,38 @@ another. Between them, the training batches contain exactly 5000 images from eac
 
 ## Network Architecture
 
-Two different Network Architectures were used for the two different datasets.
+Steps Involved
+1. Data Loading and Preprocessing 
+ Load the CIFAR-10 dataset.
+Apply transformations such as:
+Convert images to tensor format.
+Normalize the images.
+ Load the data using the training data loader.
+ Visualize an image by converting it into a NumPy array and displaying it using imshow().
+Display a batch of images using the training data loader.
 
-a) **CIFAR-10**
+3. Custom Dataset Preparation 
+ Define a custom Dataset class:
+ Load an image from the dataset.
+ Create a mask region.
+ Incorporate the mask region into the original image.
+ Create a DataLoader that contains:
+Masked image
+Mask-only image
+Image without the masked region
+Visualize the processed images.
+4. Model Training 🏋️‍♂
+Implement the U-Net architecture for image segmentation.
+ Define a custom function jaccard_coef to compute the Intersection over Union (IoU) between the predicted and actual images.
+ Use Mean Squared Error (MSE) loss function.
+ Apply the ADAM optimizer.
+ Generate output images, including:
+Masked image
+Output (predicted) image
+Mask region
+ Unmasked region
 
-![CIFAR-10 Network Architecture](CIFAR_10_Network_Architecture.PNG)
 
-The CIFAR10 dataset consists of images having the dimension of 32x32, therefore the input images to the model will be having a tensor with dimensions of (32x32x3). The network is divided into two parts namely the encoder and the decoder. The encoder compresses the input data and converts the image to a latent space representation. The decoder reconstructs the data from the latent space representation. The essence of the encoder and decoder lies in the Upsampling part and the concatenate layer. ReLU is used in the encoding stage and LeakyReLU with alpha = 0.2 is used between all decoding layers. The kernel size used for the layers is 3. The channel sizes are 32, 64, 128, 256, 512. The last partial convolution layer’s input will contain the concatenation of the original input image with hole and original mask making it possible for the model to copy non-hole pixels.
-
-
-
-## Flow Diagram
-
-![Flow Diagram](Flow_Diagram.PNG)
-
-1) First an image is inserted, this image could be from the train, test data or from the
-desktop.
-2) Then the image is transformed into a tensor and also normalized using the torchvision
-library.
-3) Binary masking is performed. Here we use only random lines of various thickness to
-mask the image.
-4) We then obtain two images, the Masked image and the mask pattern
-5) These two images are passed as arguments to the partial convolution model
-6) The output is the inpainted image
 
 7) ## Evaluation and Results
 
