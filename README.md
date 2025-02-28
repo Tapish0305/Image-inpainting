@@ -25,6 +25,8 @@ The CIFAR10 dataset consists of images having the dimension of 32x32, therefore 
 
 ## Flow chart
 
+![Flow_Diagram](https://github.com/user-attachments/assets/c41abd76-a843-4cd1-93b1-983b9580f63c)
+
 1. Data Loading and Preprocessing 
  Load the CIFAR-10 dataset.
 Apply transformations such as:
@@ -64,12 +66,14 @@ a) **CIFAR-10**
 
 The model was trained for 3 hours on the prepared dataset based on CIFAR10. The learning optimization algorithm used was ADAM with a learning rate of 0.01. The model was trained for 15 epochs. Jaccard Coefficient was used as the evaluation parameter to test the accuracy of the model.
 
-![CIFAR-10 Loss Values]([CIFAR_10_Loss_Values.PNG](https://github.com/Shivkumar25/Image-Inpainting/raw/168c745523e81ffeb456c2c23a481a4ec35ec358/CIFAR_10_Network_Architecture.PNG))
+![CIFAR_10_Loss_Values](https://github.com/user-attachments/assets/06cecabd-bda3-4c32-95de-84fbf90901b1)
+
 
 
 The obtained accuracy/jaccard coefficient value on the test data is 65.
 
-![CIFAR-10 Test Data Results](CIFAR_10_Test_Data_Result.PNG)
+![CIFAR_10_Test_Data_Result](https://github.com/user-attachments/assets/b626abfb-c534-4b3d-a117-e383d3dec805)
+
 
 # Conclusions
 Therefore, the use of a partial convolution layer with an automatic mask updating mechanism can achieve image inpainting results. The model can robustly handle holes of only small size and thickness. However, one limitation of the method is that it fails for thickness of larger size which can be overcome by using larger number of datasets, more training time and using a different loss function. Loss function which targets both per-pixel reconstruction accuracy as well as composition i.e. how smoothly the predicted hole values transition into their surrounding context can be used.
