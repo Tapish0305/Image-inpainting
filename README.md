@@ -20,8 +20,11 @@ another. Between them, the training batches contain exactly 5000 images from eac
 ## Network Architecture
 ![CIFAR_10_Network_Architecture](https://github.com/user-attachments/assets/e722d45b-b8c9-419a-a698-586df29d7270)
 
+The CIFAR10 dataset consists of images having the dimension of 32x32, therefore the input images to the model will be having a tensor with dimensions of (32x32x3). The network is divided into two parts namely the encoder and the decoder. The encoder compresses the input data and converts the image to a latent space representation. The decoder reconstructs the data from the latent space representation. The essence of the encoder and decoder lies in the Upsampling part and the concatenate layer. ReLU is used in the encoding stage and LeakyReLU with alpha = 0.2 is used between all decoding layers. The kernel size used for the layers is 3. The channel sizes are 32, 64, 128, 256, 512. The last partial convolution layer’s input will contain the concatenation of the original input image with hole and original mask making it possible for the model to copy non-hole pixels.
 
-Steps Involved
+
+## Flow chart
+
 1. Data Loading and Preprocessing 
  Load the CIFAR-10 dataset.
 Apply transformations such as:
