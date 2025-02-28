@@ -69,6 +69,8 @@ Therefore, the use of a partial convolution layer with an automatic mask updatin
 
 
 ## Acknowledgements
+ This project utilizes the CIFAR-10 dataset and U-Net architecture for image segmentation. The implementation is inspired by research in deep 
+ learning and computer vision.
 
  - [Image Inpainting for Irregular Holes Using Partial Convolutions](https://arxiv.org/abs/1804.07723)
  - [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
