@@ -39,7 +39,7 @@ Masked image
 Mask-only image
 Image without the masked region
 Visualize the processed images.
-4. Model Training 🏋️‍♂
+4. Model Training 🏋
 Implement the U-Net architecture for image segmentation.
  Define a custom function jaccard_coef to compute the Intersection over Union (IoU) between the predicted and actual images.
  Use Mean Squared Error (MSE) loss function.
@@ -52,7 +52,7 @@ Mask region
 
 
 
-7) ## Evaluation and Results
+## Evaluation and Results
 
 a) **CIFAR-10**
 
