@@ -58,7 +58,8 @@ a) **CIFAR-10**
 
 The model was trained for 3 hours on the prepared dataset based on CIFAR10. The learning optimization algorithm used was ADAM with a learning rate of 0.01. The model was trained for 15 epochs. Jaccard Coefficient was used as the evaluation parameter to test the accuracy of the model.
 
-![CIFAR-10 Loss Values](CIFAR_10_Loss_Values.PNG)
+![CIFAR-10 Loss Values]([CIFAR_10_Loss_Values.PNG](https://github.com/Shivkumar25/Image-Inpainting/raw/168c745523e81ffeb456c2c23a481a4ec35ec358/CIFAR_10_Network_Architecture.PNG))
+
 
 The obtained accuracy/jaccard coefficient value on the test data is 65.
 
